@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Portfólio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <!-- Estilos customizados -->
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Estilo para os links "Sobre Mim", "Projetos" e "Contato" */
+        .nav-link, .btn-custom {
+            color: #252525; /* Cinza mais claro */
+            transition: color 0.4s ease-in-out;
+        }
+
+        /* Efeito de hover para os links e botões */
+        .nav-link:hover, .btn-custom:hover {
+            color: #ffffff; /* Branco */
+            text-decoration: none;
+        }
+
+        /* Estilo para os ícones das redes sociais */
+        .social-icons a {
+            color: #808080; /* Cinza mais claro */
+            transition: color 0.3s ease-in-out;
+            margin-right: 10px; /* Espaçamento entre os ícones */
+        }
+
+        /* Efeito de hover para os ícones das redes sociais */
+        .social-icons a:hover {
+            color: #ffffff; /* Branco */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <header class="bg-dark text-white p-3 fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="#home">Home</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">Sobre Mim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#projects">Projetos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção Home -->
+    <section id="home" class="container-fluid bg-light text-center vh-100 d-flex align-items-center justify-content-center">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+    </section>
+
+    <!-- Seção Sobre Mim -->
+    <section id="about" class="container py-5" style="padding: 20px;" >
+        <h2>Sobre Mim</h2>
+        <div class="row">
+            <div class="col-md-4" >
+                <img src="img/profile.jpeg" class="img-fluid rounded-circle" alt="Minha Foto">
+            </div>
+            <div class="col-md-8">
+                <p>Olá! Meu nome é Erick Nunes e sou um Desenvolvedor Júnior apaixonado por tecnologia e programação. Descobri o mundo da tecnologia tem um tempo e tenho trabalhado em diversos projetos que utilizam tecnologias como HTML, CSS, JavaScript, Node.js, Dart, Flutter, Phython entre outras.</p>
+                <p>Tenho um forte interesse em desenvolvimento width/Mobile e estou sempre buscando aprender novas tecnologias e melhorar minhas habilidades. Meus projetos incluem desde sites estáticos até aplicações web dinâmicas. Além disso, estou familiarizado com o uso de frameworks como Express.js e Flutter e bibliotecas como React.</p>
+                <p>Estou ansioso para aplicar meus conhecimentos em um ambiente profissional e contribuir para projetos desafiadores. Acredito no poder da colaboração e estou sempre aberto a novas oportunidades e aprendizados.</p>
+                <p>Nas horas vagas, gosto de explorar novas tecnologias, ler sobre inovação tecnológica e participar de comunidades de desenvolvedores.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projects" class="container py-5" style="padding: 20px;">
+        <h2>Projetos</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/project1.jpg" class="card-img-top" alt="Projeto 1">
+                    <div class="card-body">
+                        <p class="card-text">Descrição do Projeto 1...</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Adicione mais projetos aqui -->
+        </div>
+    </section>
+
+    <!-- Seção Contato -->
+<section id="contact" class="container py-5" style="padding: 20px;">
+    <h2>Contato</h2>
+    <form action="/send-message" method="POST">
+        <div class="form-group">
+            <label for="name">Nome</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone para Contato</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="project-idea">Ideia do Projeto</label>
+            <textarea class="form-control" id="project-idea" name="project-idea" rows="5" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="meeting-time">Horários Disponíveis para Reuniões</label>
+            <input type="text" class="form-control" id="meeting-time" name="meeting-time" required>
+            <small id="meeting-time-help" class="form-text text-muted">Informe os horários que você está disponível para reuniões.</small>
+        </div>
+        <button type="submit" class="btn btn-dark">Enviar Mensagem</button>
+    </form>
+</section>
+
+
+    <!-- Rodapé -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <p>&copy; 2024 Meu Portfólio. Todos os direitos reservados.</p>
+                </div>
+                <div class="col social-icons">
+                    <!-- Ícones das redes sociais -->
+                    <a href="https://github.com/ErickNunnes" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=5521984156818" target="_blank"><i class="fab fa-whatsapp fa-2x"></i></a>
+                    <a href="https://www.instagram.com/ericspss/" target="_blank"><i class="fab fa-instagram fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/erick-nunes-1a77b3220/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <!-- Script customizado -->
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
